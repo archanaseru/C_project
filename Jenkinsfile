@@ -23,7 +23,7 @@ pipeline {
             steps {
                 bat '''
                   mkdir -p .sonar
-                  curl -sSLo .sonar/build-wrapper-linux-x86.zip "https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip"
+                  curl -sSLo .sonar/build-wrapper-linux-x86.zip https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
                   tar -xf  .sonar/build-wrapper-linux-x86.zip -C .sonar/
                 '''
             }
