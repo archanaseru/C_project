@@ -24,7 +24,7 @@ pipeline {
                 bat '''
                   mkdir -p .sonar
                   curl -sSLo .sonar/build-wrapper-linux-x86.zip "https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip"
-                  unzip -o .sonar/build-wrapper-linux-x86.zip -d .sonar/
+                  tar -xf  .sonar/build-wrapper-linux-x86.zip -C .sonar/
                 '''
             }
         }
