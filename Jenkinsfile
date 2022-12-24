@@ -7,7 +7,7 @@ pipeline {
     }
 
     environment {
-        SONARQUBE_URL = '<SonarQube URL>' // Replace with your SonarQube server URL
+        SONARQUBE_URL = 'https://sonarcloud.io/' // Replace with your SonarQube server URL
     }    
 
     stages {
