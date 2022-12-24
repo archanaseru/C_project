@@ -32,7 +32,7 @@ stage('Build') {
             steps {
                 bat ''' 
                   mkdir build                 
-                  C:\Program Files\CMake\bin\cmake -S . -B build
+                  C:\\Program Files\\CMake\\bin\\cmake -S . -B build
                 '''
             }
         }
