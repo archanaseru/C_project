@@ -21,7 +21,7 @@ pipeline {
 
         stage('Download Build Wrapper') {
             steps {
-                sh '''
+                bat '''
                   mkdir -p .sonar
                   curl -sSLo .sonar/build-wrapper-linux-x86.zip ${SONARQUBE_URL}/static/cpp/build-wrapper-linux-x86.zip 
                   unzip -o .sonar/build-wrapper-linux-x86.zip -d .sonar/
@@ -31,7 +31,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh ''' 
+                bat ''' 
                   mkdir build                 
                   cmake -S . -B build
                   .sonar/build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir bw-output cmake --build build/ --config Release
