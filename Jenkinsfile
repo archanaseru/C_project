@@ -32,7 +32,7 @@ stage('Build') {
             steps {
                 bat ''' 
                   mkdir build                 
-                  cmake -S . -B build
+                  cmake -C C:\MinGW\bin\gcc -S . -B build
                 '''
             }
         }
