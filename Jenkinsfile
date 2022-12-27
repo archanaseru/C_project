@@ -43,7 +43,12 @@ stage('Build') {
                 script {
                     def scannerHome = tool 'SonarScanner'; // Name of the SonarQube Scanner you created in "Global Tool Configuration" section
                     withSonarQubeEnv() {
-                        bat "${scannerHome}/bin/sonar-scanner"
+                        bat "sonar-scanner \
+                        -Dsonar.organization=archanaseru \
+                        -Dsonar.projectKey=archanaseru_linux-cmake-jenkins-sq \
+                          -Dsonar.sources=. \
+                          -Dsonar.cfamily.build-wrapper-output=bw-output \
+                            -Dsonar.host.url=https://sonarcloud.io "
                     }
                 }
             }
