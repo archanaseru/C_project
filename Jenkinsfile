@@ -19,22 +19,12 @@ pipeline {
             }
         }
 
-        stage('Download Build Wrapper') {
-            steps {
-                bat '''
-                  mkdir -p .sonar
-                  curl -sSLo .sonar/build-wrapper-linux-x86.zip https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
-                  tar -xf  .sonar/build-wrapper-linux-x86.zip -C .sonar/
-                  
-               
-                '''
-            }
-        }
+      
 stage('Build') {
             steps {
                 bat ''' 
                   mkdir build   
-                  build-wrapper-linux-x86-64 --out-dir bw-output cmake -S -B build
+                  C:\Users\archa\Downloads\build-wrapper-win-x86\build-wrapper-win-x86 --out-dir bw-output cmake -S -B build
                  
                 '''
             }
