@@ -8,6 +8,9 @@ pipeline {
 
     environment {
         SONARQUBE_URL = 'https://sonarcloud.io/' // Replace with your SonarQube server URL
+        environment {
+        MY_PATH='C:\Users\archa\Downloads\build-wrapper-win-x86'
+    }
     }    
 
     stages {
@@ -24,7 +27,8 @@ stage('Build') {
             steps {
                 bat ''' 
                   mkdir build   
-                  echo $PATH
+                  set PATH = "%MY_PATH%;%PATH%"
+
                   build-wrapper-win-x86 --out-dir bw-output cmake -S -B build
                 '''
             }
