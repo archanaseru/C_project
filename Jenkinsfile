@@ -9,7 +9,7 @@ pipeline {
     environment {
         SONARQUBE_URL = 'https://sonarcloud.io/' // Replace with your SonarQube server URL
         environment {
-        MY_PATH='C:\Users\archa\Downloads\build-wrapper-win-x86'
+        MY_PATH='C:\\Users\\archa\\Downloads\\build-wrapper-win-x86'
     }
     }    
 
