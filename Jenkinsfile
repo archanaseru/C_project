@@ -24,7 +24,7 @@ stage('Build') {
             steps {
                 bat ''' 
                   mkdir build   
-                  C:\Users\archa\Downloads\build-wrapper-win-x86\build-wrapper-win-x86 --out-dir bw-output cmake -S -B build
+                  C:\\Users\\archa\\Downloads\\build-wrapper-win-x86\\build-wrapper-win-x86 --out-dir bw-output cmake -S -B build
                  
                 '''
             }
