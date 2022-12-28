@@ -28,8 +28,8 @@ stage('Build') {
                 bat ''' 
                   mkdir build   
                   set PATH = "%MY_PATH%;%PATH%"
-
-                  C:\\Users\\archa\\Downloads\\build-wrapper-win-x86\\build-wrapper-win-x86.exe --out-dir bw-output cmake -S -B build
+                    cd C:\\Users\\archa\\Downloads\\build-wrapper-win-x86
+                     build-wrapper-win-x86.exe --out-dir bw-output cmake -S -B build
                 '''
             }
         }
