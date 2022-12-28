@@ -24,8 +24,8 @@ stage('Build') {
             steps {
                 bat ''' 
                   mkdir build   
+                  echo $PATH
                   build-wrapper-win-x86 --out-dir bw-output cmake -S -B build
-                 
                 '''
             }
         }
